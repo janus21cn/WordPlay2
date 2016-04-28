@@ -21,11 +21,13 @@
         </activity>
         <activity
             android:name=".WordOne"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:screenOrientation="landscape" />
         <activity android:name=".WordFive"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:screenOrientation="landscape" ></activity>
+        <activity
+            android:name=".DrawingPage"
+            android:screenOrientation="landscape" >
+        </activity>
     </application>
 
 </manifest>

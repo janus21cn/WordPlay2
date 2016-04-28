@@ -14,14 +14,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button playBtn = (Button) findViewById(R.id.btn_Play);
-        playBtn.setOnClickListener(new View.OnClickListener() {
+        Button drawBtn = (Button) findViewById(R.id.btn_draw);
+        drawBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, WordOne.class);
+                Intent intent = new Intent(MainActivity.this, DrawingPage.class);
                 startActivity(intent);
             }
         });
-    }
 
+    }
 }

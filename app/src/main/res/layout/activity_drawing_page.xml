@@ -4,4 +4,6 @@
     android:layout_height="match_parent"
     >
 
+    <include layout="@layout/content_drawing_page" />
+
 </LinearLayout>
