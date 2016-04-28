@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wordone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="wonder4.wordplay2.WordOne"
+    android:background="@drawable/word1">
+    <Button
+        android:id="@+id/btn_home"
+        android:background="@drawable/home"
+        android:layout_width="70dp"
+        android:layout_height="70dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sheep"
+        android:textSize="36dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:id="@+id/sheep"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="143dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/btn_chinese"
+        android:background="@drawable/chinese"
+        android:layout_width="50dp"
+        android:text="right"
+        android:textSize="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/sheep"
+        android:layout_toLeftOf="@+id/btn_turkish"
+        android:layout_toStartOf="@+id/btn_turkish" />
+    <Button
+        android:id="@+id/btn_english"
+        android:background="@drawable/english"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/btn_turkish"
+        android:layout_toRightOf="@+id/btn_turkish"
+        android:layout_toEndOf="@+id/btn_turkish" />
+    <Button
+        android:id="@+id/btn_turkish"
+        android:background="@drawable/turkish"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/sheep"
+        android:layout_alignRight="@+id/sheep"
+        android:layout_alignEnd="@+id/sheep" />
+    <Button
+        android:id="@+id/btn_left"
+        android:background="@drawable/left"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignTop="@+id/btn_right"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/btn_right"
+        android:background="@drawable/right"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>
