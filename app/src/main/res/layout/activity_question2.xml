@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="wonder4.wordplay2.Question2"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:src="@drawable/cat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="WHAT IS THAT ?"
+                android:id="@+id/textView"
+                android:typeface="monospace"
+                android:fontFamily="@string/abc_capital_on"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:text="DOG"
+            android:id="@+id/answer_4"
+            android:backgroundTint="#0FFF"
+            />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="CAT"
+            android:textSize="20dp"
+            android:id="@+id/answer_5"
+            android:backgroundTint="#0FFF"
+
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="BIRD"
+            android:textSize="20dp"
+            android:id="@+id/answer_6"
+            android:backgroundTint="#0FFF"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/left_arrow"
+            android:background="#FFFFFF"
+            android:src="@mipmap/left_arrow"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="10dp"
+            android:id="@+id/btn_invisible"
+            android:backgroundTint="#0FFF"
+            android:visibility="invisible"
+
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_arrow"
+            android:layout_gravity="right"
+            android:background="#FFFFFF"
+            android:foregroundGravity="right"
+            android:src="@mipmap/right_arrow" />
+    </LinearLayout>
+
+</LinearLayout>
