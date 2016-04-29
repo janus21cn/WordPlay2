@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         GotoQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, Question1.class);
+                startActivity(intent);
             }
         });
 
