@@ -44,6 +44,10 @@
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
+            android:name=".Result"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
             android:name=".DrawingPage"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
