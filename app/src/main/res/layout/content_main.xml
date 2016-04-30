@@ -6,6 +6,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/home_bg"
     >
 
     <LinearLayout
@@ -14,28 +15,49 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="16dp"
+        android:layout_marginTop="30dp"
         >
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Play"
+            android:layout_marginBottom="5dp"
             android:id="@+id/btn_Play"
+            android:textColor="#5FB404"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:typeface="monospace"
             android:backgroundTint="#0FFF"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Draw"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:id="@+id/btn_draw"
+            android:textColor="#5FB404"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:typeface="monospace"
             android:backgroundTint="#0FFF"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Quiz"
+            android:layout_marginTop="5dp"
             android:id="@+id/btn_quiz"
+            android:textColor="#5FB404"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:typeface="monospace"
             android:backgroundTint="#0FFF"
             />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wonder4 \u00a9 2016 All Rights Reserved"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>

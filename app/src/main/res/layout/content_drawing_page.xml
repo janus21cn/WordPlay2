@@ -1,71 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#81BEF7"
+    android:background="@drawable/drawing_bg"
     android:orientation="vertical"
     tools:context=".DrawingPage">
+
+    <Button
+        android:id="@+id/homepage_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/home_icon" />
+    <Button
+        android:id="@+id/previous_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/left" />
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/right" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:orientation="horizontal" >
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp">
 
         <ImageButton
             android:id="@+id/new_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
             android:contentDescription="@string/start_new"
             android:src="@drawable/new_pic" />
 
         <ImageButton
             android:id="@+id/draw_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
             android:contentDescription="@string/brush"
             android:src="@drawable/brush" />
 
         <ImageButton
             android:id="@+id/erase_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
             android:contentDescription="@string/erase"
             android:src="@drawable/eraser" />
 
         <ImageButton
             android:id="@+id/save_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
             android:contentDescription="@string/save"
             android:src="@drawable/save" />
 
     </LinearLayout>
 
-    <wonder4.wordplay2.DrawingPage
+    <wonder4.wordplay2.DrawingView
         android:id="@+id/drawing"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="3dp"
-        android:layout_weight="1"
-        android:background="#FFFFFFFF" />
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/homepage_btn"
+        android:background="@drawable/duck" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical" >
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp">
 
         <!-- Top Row -->
         <LinearLayout
             android:id="@+id/paint_colors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <ImageButton
                 android:layout_width="@dimen/large_brush"
@@ -198,4 +224,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
