@@ -15,20 +15,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button playBtn = (Button) findViewById(R.id.btn_Play);
-
-        Button GotoQuiz = (Button)findViewById(R.id.btn_quiz);
-
         playBtn.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   Intent intent = new Intent(MainActivity.this, WordOne.class);
+                   startActivity(intent);
+               }
+           });
+
         Button drawBtn = (Button) findViewById(R.id.btn_draw);
         drawBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, WordOne.class);
+                Intent intent = new Intent(MainActivity.this, DrawingPage.class);
                 startActivity(intent);
             }
         });
 
-
+        Button GotoQuiz = (Button)findViewById(R.id.btn_quiz);
         GotoQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

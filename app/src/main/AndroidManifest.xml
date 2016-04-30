@@ -24,8 +24,6 @@
         <activity
             android:name=".WordOne"
             android:screenOrientation="landscape" />
-        <activity android:name=".WordFive"
-            android:screenOrientation="landscape" />
         <activity
             android:name=".DrawingPage"
             android:screenOrientation="landscape"
@@ -34,13 +32,12 @@
             android:name=".WordFive"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Question1" />
         <activity android:name=".Question2" />
         <activity android:name=".Question3" />
         <activity android:name=".Question4" />
         <activity android:name=".Question5" />
-        <activity android:name=".Result"></activity>
+        <activity android:name=".Result" />
     </application>
 
 </manifest>
