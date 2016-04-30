@@ -5,48 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="wonder4.wordplay2.WordOne"
-    android:background="@drawable/word1">
+    android:background="@drawable/bgsun">
     <Button
         android:id="@+id/btn_home"
         android:background="@drawable/home"
         android:layout_width="70dp"
         android:layout_height="70dp" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1"
+        android:src="@drawable/boy"
+        android:layout_above="@+id/btn_left"
+        android:layout_toRightOf="@+id/btn_left"
+        android:layout_toEndOf="@+id/btn_left" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sheep"
+        android:text="Boy"
         android:textSize="80dp"
         android:textColor="#000"
         android:textStyle="bold"
-        android:id="@+id/sheep"
+        android:background="#f8f08d"
+        android:id="@+id/w1"
         android:layout_below="@+id/btn_home"
-        android:layout_toStartOf="@+id/btn_right" />
+        android:layout_toStartOf="@+id/btn_right"
+        android:layout_toLeftOf="@+id/imageView1"/>
     <Button
         android:id="@+id/btn_chinese"
         android:background="@drawable/chinese"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@+id/sheep"
-        android:layout_alignStart="@+id/sheep" />
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/w1"
+        android:layout_toLeftOf="@+id/btn_turkish"
+        />
     <Button
         android:id="@+id/btn_english"
         android:background="@drawable/english"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_alignTop="@+id/btn_turkish"
-        android:layout_alignEnd="@+id/sheep" />
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/w1"
+        android:layout_toLeftOf="@+id/btn_right" />
     <Button
         android:id="@+id/btn_turkish"
-        android:background="@drawable/turkish"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_alignTop="@+id/btn_chinese"
-        android:layout_toEndOf="@+id/btn_chinese"
-        android:layout_marginStart="26dp" />
+        android:background="@drawable/turkey"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/w1"
+        android:layout_toLeftOf="@+id/btn_english" />
     <Button
         android:id="@+id/btn_left"
         android:background="@drawable/left"

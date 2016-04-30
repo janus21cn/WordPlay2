@@ -2,21 +2,21 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillAfter="true">
     <translate android:fromXDelta="0"
-        android:toXDelta="20%p"
-        android:duration="1000"
+        android:toXDelta="40%p"
+        android:duration="2000"
         android:fillAfter="true"/>
-    <translate android:toYDelta="-10%p"
+    <translate android:toYDelta="-30%p"
         android:fillAfter="true"
-        android:duration="1000"
-        android:startOffset="1000"/>
+        android:duration="2000"
+        android:startOffset="2000"/>
     <translate
-        android:toXDelta="30%p"
+        android:toXDelta="-40%p"
         android:fillAfter="true"
-        android:duration="1000"
+        android:duration="2000"
         android:startOffset="2000"/>
     <translate
         android:toYDelta="45%p"
         android:fillAfter="true"
-        android:duration="1000"
-        android:startOffset="2000"/>
+        android:duration="2000"
+        android:startOffset="3500"/>
 </set>
