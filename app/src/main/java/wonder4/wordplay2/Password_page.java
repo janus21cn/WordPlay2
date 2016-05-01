@@ -50,7 +50,7 @@ public class Password_page extends Activity{
             public void onClick(View v) {
                 number[0] = number_numbers[rando];
                 if (!(number_view.getText().toString().equals(" ")) && number_view.getText().toString().equals(number[0])){
-                            Intent intent = new Intent(Password_page.this, MainActivity.class);
+                            Intent intent = new Intent(Password_page.this, Settings.class);
                             startActivity(intent);
                 }
                 else {
