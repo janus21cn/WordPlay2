@@ -41,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button GotoSettings = (Button)findViewById(R.id.btn_settings);
+        GotoSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Password_page.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
