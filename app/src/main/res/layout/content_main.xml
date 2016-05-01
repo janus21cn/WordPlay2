@@ -64,6 +64,18 @@
             android:backgroundTint="#0FFF"
             android:layout_gravity="center_horizontal" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Help"
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn_help"
+            android:textColor="#5FB404"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:typeface="monospace"
+            android:backgroundTint="#0FFF"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 

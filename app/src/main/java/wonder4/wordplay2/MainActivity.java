@@ -50,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button GotoHelp = (Button)findViewById(R.id.btn_help);
+        GotoSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Help_Page.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

@@ -26,7 +26,6 @@ public class Settings extends AppCompatActivity {
         Switch cellData = (Switch) findViewById(R.id.cellTog);
         Switch notifications = (Switch) findViewById(R.id.noticeTog);
 
-
         Button home = (Button) findViewById(R.id.homeBtn_Set);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
