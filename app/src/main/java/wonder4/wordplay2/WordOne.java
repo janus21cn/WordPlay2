@@ -23,11 +23,15 @@ public class WordOne extends AppCompatActivity {
     private Animation animation;
     String[] words={"Boy","Dog","Duck","Bird","Elephant"};
     String[] imgs={"boy","dog", "duckw","bird","elephant"};
-    String[] sounds={"boy","dog", "duck","bird","elepha"};
+    String[] sounds={"boy_en","dog_en", "duck_en","bird_en","elephant_en"};
+    String[] soundscn={"boy_cn","dog_cn", "duck_cn","bird_cn","elephant_cn"};
+    String[] soundsgn={"junge_boy","hund_dog", "ente_duck","vogel_bird","elefant_elephant"};
     String wd;
     public int i=1;
     ImageView img;
     MediaPlayer wordsound;
+    MediaPlayer wordsoundcn;
+    MediaPlayer wordsoundgn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,12 +41,28 @@ public class WordOne extends AppCompatActivity {
 
         img= (ImageView) findViewById(R.id.imageView1);
 
-        wordsound = MediaPlayer.create(WordOne.this, R.raw.boy);
+        wordsound = MediaPlayer.create(WordOne.this, R.raw.boy_en);
+        wordsoundcn = MediaPlayer.create(WordOne.this, R.raw.boy_cn);
+        wordsoundgn = MediaPlayer.create(WordOne.this, R.raw.junge_boy);
         Button englishBtn = (Button) findViewById(R.id.btn_english);
         englishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 wordsound.start();            }
+        });
+
+        Button chineseBtn = (Button) findViewById(R.id.btn_chinese);
+        chineseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                wordsoundcn.start();            }
+        });
+
+        Button germanBtn = (Button) findViewById(R.id.btn_german);
+        germanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                wordsoundgn.start();            }
         });
 
         Button rightBtn = (Button) findViewById(R.id.btn_right);
@@ -54,7 +74,11 @@ public class WordOne extends AppCompatActivity {
                     wd=words[i];
                     int imgID = getResources().getIdentifier(imgs[i] , "drawable", getPackageName());
                     int soundID = getResources().getIdentifier(sounds[i] , "raw", getPackageName());
+                    int soundIDcn = getResources().getIdentifier(soundscn[i] , "raw", getPackageName());
+                    int soundIDgn = getResources().getIdentifier(soundsgn[i] , "raw", getPackageName());
                     wordsound= MediaPlayer.create(WordOne.this, soundID);
+                    wordsoundcn= MediaPlayer.create(WordOne.this, soundIDcn);
+                    wordsoundgn= MediaPlayer.create(WordOne.this, soundIDgn);
                     img.setImageResource(imgID);
                     ((TextView)findViewById(R.id.w1)).setText(words[i]);
                     i++;
@@ -76,7 +100,11 @@ public class WordOne extends AppCompatActivity {
                     wd=words[i];
                     int imgID = getResources().getIdentifier(imgs[i] , "drawable", getPackageName());
                     int soundID = getResources().getIdentifier(sounds[i] , "raw", getPackageName());
+                    int soundIDcn = getResources().getIdentifier(soundscn[i] , "raw", getPackageName());
+                    int soundIDgn = getResources().getIdentifier(soundsgn[i] , "raw", getPackageName());
                     wordsound= MediaPlayer.create(WordOne.this, soundID);
+                    wordsoundcn= MediaPlayer.create(WordOne.this, soundIDcn);
+                    wordsoundgn= MediaPlayer.create(WordOne.this, soundIDgn);
                     img.setImageResource(imgID);
                     ((TextView)findViewById(R.id.w1)).setText(words[i]);
 
