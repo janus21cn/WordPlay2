@@ -3,6 +3,7 @@ package wonder4.wordplay2;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
@@ -44,7 +45,7 @@ public class Settings extends AppCompatActivity {
                 tmanager.
             }
 
-
+setWifiEnable?
             else
                 tmanager.getDataState(TelephonyManager.DATA_CONNECTED);
 
