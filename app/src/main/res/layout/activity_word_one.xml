@@ -40,7 +40,7 @@
         android:layout_height="60dp"
         android:layout_marginLeft="15dp"
         android:layout_below="@+id/w1"
-        android:layout_toLeftOf="@+id/btn_turkish"
+        android:layout_toLeftOf="@+id/btn_german"
         />
     <Button
         android:id="@+id/btn_english"
@@ -51,7 +51,7 @@
         android:layout_below="@+id/w1"
         android:layout_toLeftOf="@+id/btn_right" />
     <Button
-        android:id="@+id/btn_turkish"
+        android:id="@+id/btn_german"
         android:background="@drawable/turkey"
         android:layout_width="60dp"
         android:layout_height="60dp"
