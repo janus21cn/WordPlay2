@@ -53,7 +53,7 @@
         android:layout_toLeftOf="@+id/btn_right" />
     <Button
         android:id="@+id/btn_german"
-        android:background="@drawable/turkey"
+        android:background="@drawable/german"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginLeft="15dp"
