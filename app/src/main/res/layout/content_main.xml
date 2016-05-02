@@ -79,6 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wonder4 \u00a9 2016 All Rights Reserved"
+        android:layout_gravity="center"
         android:textColor="#FFFFFF"
         android:layout_marginTop="10dp"/>
 
