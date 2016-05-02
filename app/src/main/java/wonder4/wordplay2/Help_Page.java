@@ -23,5 +23,8 @@ public class Help_Page extends AppCompatActivity {
             }
         });
 
+    //    Button devWebsite = (Button) findViewById(R.id.dev_WebSite);
+
+
     }
 }
