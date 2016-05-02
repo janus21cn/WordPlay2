@@ -23,7 +23,29 @@ public class Help_Page extends AppCompatActivity {
             }
         });
 
-    //    Button devWebsite = (Button) findViewById(R.id.dev_WebSite);
+        Button devWebsite = (Button) findViewById(R.id.dev_Website);
+        devWebsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        Button priPolicy = (Button) findViewById(R.id.privacy_policy);
+        priPolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        Button ratebtn = (Button) findViewById(R.id.rate_btn);
+        ratebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
     }
