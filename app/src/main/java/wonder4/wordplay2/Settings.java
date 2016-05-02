@@ -44,7 +44,7 @@ public class Settings extends AppCompatActivity {
                 tmanager.
             }
 
-
+setWifiEnable?
             else
                 tmanager.getDataState(TelephonyManager.DATA_CONNECTED);
 
