@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.Toast;
 
 /**
  * Created by erogacki on 4/28/16.
@@ -32,29 +33,35 @@ public class SettingsActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked)
                     amanager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, 0);
-                else
+                else {
                     amanager.setStreamVolume(AudioManager.STREAM_MUSIC, 1, 1);
+                    Toast.makeText(getApplicationContext(), "Music turned off", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
 
 /*
-        TelephonyManager tmanager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
-
-        Switch cellData = (Switch) findViewById(R.id.cellTog);
-            if (cellData.isChecked()==true) {
-               // 2 = data connected
-               // 0 = data disconnected
-                tmanager.
-            }
-
 setWifiEnable?
             else
                 tmanager.getDataState(TelephonyManager.DATA_CONNECTED);
 
 */
 
-        Switch notifications = (Switch) findViewById(R.id.noticeTog);
+        final Switch notifications = (Switch) findViewById(R.id.noticeTog);
+        notifications.setChecked(true);
+        notifications.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked)
+                    notifications.setChecked(true);
+                else {
+                    notifications.setChecked(false);
+                    Toast.makeText(getApplicationContext(), "Notifications turned off", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 
         Button home = (Button) findViewById(R.id.homeBtn_Set);
         home.setOnClickListener(new View.OnClickListener() {
