@@ -69,5 +69,15 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_feed_back">FeedBack</string>
+
+
+    <string name="button_feedback">Send feedback</string>
+    <string name="title_send_feedback">Send feedback</string>
+
+    <string name="mail_feedback_email">YourEmailAdress</string>
+    <string name="mail_feedback_subject">Feedback on your app</string>
+    <string name="mail_feedback_message">Hi,
+\n\nYour Feedback sample app rocks! I would like to give you some feedback:</string>
 
 </resources>

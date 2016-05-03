@@ -41,7 +41,7 @@
             android:paddingLeft="20dp"
 
             android:textStyle="bold|normal"
-            android:layout_weight="0.50" />
+            android:layout_weight="0.52" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"

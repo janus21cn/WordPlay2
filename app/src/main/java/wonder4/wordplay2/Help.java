@@ -1,5 +1,6 @@
 package wonder4.wordplay2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,8 @@ public class Help extends AppCompatActivity {
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Help.this, FeedBack.class);
+                startActivity(intent);
 
             }
         });
