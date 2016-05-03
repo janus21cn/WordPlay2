@@ -5,18 +5,6 @@
     android:layout_height="match_parent">
 
 
-
-        <Switch
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Game Voice"
-            android:textSize="25dp"
-            android:id="@+id/gameVoiceTog"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp" />
-
         <Switch
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

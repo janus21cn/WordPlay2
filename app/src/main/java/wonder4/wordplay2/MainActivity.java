@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         GotoSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Password_page.class);
+                Intent intent = new Intent(MainActivity.this, PWord_page.class);
                 startActivity(intent);
             }
         });
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         GotoHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Help_Page.class);
+                Intent intent = new Intent(MainActivity.this, Help.class);
                 startActivity(intent);
             }
         });

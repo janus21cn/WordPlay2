@@ -9,30 +9,33 @@ import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 
 /**
  * Created by erogacki on 4/28/16.
  */
-public class Settings extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_settings_page);
 
-        AudioManager amanager=(AudioManager)getSystemService(Context.AUDIO_SERVICE);
-        // Mute and unmute voice and music
-        Switch gameVoice = (Switch) findViewById(R.id.gameVoiceTog);
-            if (gameVoice.isChecked()==true)
-                amanager.setStreamVolume(AudioManager.STREAM_MUSIC, 0,0);
-            else
-                amanager.setStreamVolume(AudioManager.STREAM_MUSIC, 1,1);
+        final AudioManager amanager=(AudioManager)getSystemService(Context.AUDIO_SERVICE);
 
-        Switch music = (Switch) findViewById(R.id.musicTog);
-        if (music.isChecked()==true)
-            amanager.setStreamVolume(AudioManager.STREAM_MUSIC, 0,0);
-        else
-            amanager.setStreamVolume(AudioManager.STREAM_MUSIC, 1,1);
+        // Mute and unmute music
+        final Switch music = (Switch) findViewById(R.id.musicTog);
+        music.setChecked(true);
+
+        music.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked)
+                    amanager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, 0);
+                else
+                    amanager.setStreamVolume(AudioManager.STREAM_MUSIC, 1, 1);
+            }
+        });
 
 
 /*
@@ -57,7 +60,7 @@ setWifiEnable?
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Settings.this, MainActivity.class);
+                Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
