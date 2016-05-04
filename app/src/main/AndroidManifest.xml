@@ -55,19 +55,29 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings_page" />
+            android:label="@string/title_activity_settings_page"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".PWord_page"
+            android:label="Password"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Help"
+            android:label="Help"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".FeedBack"
             android:label="@string/title_activity_feed_back"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".PrivacyPolicy"
+            android:label="Privacy Policy"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
     </application>
 
