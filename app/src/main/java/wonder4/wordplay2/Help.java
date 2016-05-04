@@ -35,6 +35,8 @@ public class Help extends AppCompatActivity {
         priPolicy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Help.this, PrivacyPolicy.class);
+                startActivity(intent);
 
             }
         });
