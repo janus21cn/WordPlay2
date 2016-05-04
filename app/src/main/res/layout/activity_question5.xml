@@ -108,6 +108,7 @@
             android:layout_height="70dp"
             android:id="@+id/right_arrow"
             android:background="@drawable/right"
-            android:foregroundGravity="right"/>
+            android:foregroundGravity="right"
+            android:visibility="invisible"/>
     </LinearLayout>
 </LinearLayout>
