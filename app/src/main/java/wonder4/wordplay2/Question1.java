@@ -17,7 +17,7 @@ public class Question1 extends AppCompatActivity {
         setContentView(R.layout.activity_question1);
 
         final String answer = "DOG";
-        ImageButton rightarrow = (ImageButton)findViewById(R.id.right_arrow);
+        Button rightarrow = (Button)findViewById(R.id.right_arrow);
         final Button answer1 = (Button)findViewById(R.id.answer_1);
         final Button answer2 = (Button)findViewById(R.id.answer_2);
         final Button answer3 = (Button)findViewById(R.id.answer_3);
