@@ -44,7 +44,6 @@ public class FeedBack extends AppCompatActivity {
             _Intent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.mail_feedback_subject));
             _Intent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.mail_feedback_message));
             startActivity(_Intent.createChooser(_Intent, "Choose an Email Client :"));
-          //  startActivity(Intent.createChooser(_Intent, getString(R.string.title_send_feedback)));
             finish();
         }
 
