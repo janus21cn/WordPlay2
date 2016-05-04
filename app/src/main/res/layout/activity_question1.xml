@@ -30,8 +30,8 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="WHAT IS THAT ?"
                 android:id="@+id/textView"
                 android:typeface="monospace"
@@ -44,7 +44,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1.60"
         android:orientation="horizontal"
         android:gravity="center">
 
@@ -80,21 +80,20 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.50"
         android:orientation="horizontal"
         android:gravity="center">
 
-        <ImageButton
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/left_arrow"
-            android:background="#FFFFFF"
-
+            android:background="@drawable/left"
             android:visibility="invisible"/>
 
         <Button
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.87"
             android:layout_height="wrap_content"
             android:text="Register"
             android:textSize="10dp"
@@ -104,12 +103,14 @@
 
             />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:id="@+id/right_arrow"
-            android:layout_gravity="right"
-            android:background="#FFFFFF"
+            android:background="@drawable/right"
             android:foregroundGravity="right"
              />
     </LinearLayout>

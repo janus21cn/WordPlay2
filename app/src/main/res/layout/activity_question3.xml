@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="WHAT IS THAT ?"
                 android:id="@+id/textView"
                 android:typeface="monospace"
@@ -44,7 +44,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1.60"
         android:orientation="horizontal"
         android:gravity="center">
 
@@ -79,16 +79,16 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+    <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:id="@+id/left_arrow"
-            android:background="#FFFFFF"
+            android:background="@drawable/left"
             />
 
         <Button
@@ -103,14 +103,15 @@
 
             />
 
+
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:id="@+id/right_arrow"
-            android:layout_gravity="right"
-            android:background="#FFFFFF"
+            android:background="@drawable/right"
             android:foregroundGravity="right"
-             />
+            />
+
     </LinearLayout>
 
 
