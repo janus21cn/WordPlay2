@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class Question5 extends AppCompatActivity implements SensorEventListener {
 
@@ -45,6 +46,12 @@ public class Question5 extends AppCompatActivity implements SensorEventListener 
         final Button answer2 = (Button)findViewById(R.id.answer_14);
         final Button answer3 = (Button)findViewById(R.id.answer_15);
 
+        final ImageView imageView = new ImageView(getApplicationContext());
+        final ImageView imageViewMad = new ImageView(getApplicationContext());
+
+        imageView.setImageResource(R.drawable.smile);
+        imageViewMad.setImageResource(R.drawable.mad);
+
         answer1.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -52,7 +59,8 @@ public class Question5 extends AppCompatActivity implements SensorEventListener 
                 String button1_Text =  answer1.getText().toString();
                 if(answer.equals(button1_Text)){
                     AlertDialog.Builder alertDialog=new AlertDialog.Builder(Question5.this);
-                    alertDialog.setMessage("Correct Answer");
+                    alertDialog.setView(imageView);
+                    alertDialog.setInverseBackgroundForced(true);
                     alertDialog.setPositiveButton("Go to Result Page", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -63,7 +71,15 @@ public class Question5 extends AppCompatActivity implements SensorEventListener 
                     alertDialog.show();
                 }else {
                     AlertDialog.Builder alertDialog1=new AlertDialog.Builder(Question5.this);
-                    alertDialog1.setMessage("Wrong Answer");
+                    alertDialog1.setView(imageViewMad);
+                    alertDialog1.setInverseBackgroundForced(true);
+                    alertDialog1.setPositiveButton("TRY AGAIN!!!", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(Question5.this,Question5.class);
+                            startActivity(intent);
+                        }
+                    });
                     alertDialog1.show();}
 
             }
@@ -75,7 +91,8 @@ public class Question5 extends AppCompatActivity implements SensorEventListener 
             public void onClick(View v) {
                 String button2_Text =  answer2.getText().toString();
                 if(answer.equals(button2_Text)){AlertDialog.Builder alertDialog=new AlertDialog.Builder(Question5.this);
-                    alertDialog.setMessage("Correct Answer");
+                    alertDialog.setView(imageView);
+                    alertDialog.setInverseBackgroundForced(true);
                     alertDialog.setPositiveButton("Go to Result Page", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -90,7 +107,15 @@ public class Question5 extends AppCompatActivity implements SensorEventListener 
                     alertDialog.show();
                 }else {
                     AlertDialog.Builder alertDialog1=new AlertDialog.Builder(Question5.this);
-                    alertDialog1.setMessage("Wrong Answer");
+                    alertDialog1.setView(imageViewMad);
+                    alertDialog1.setInverseBackgroundForced(true);
+                    alertDialog1.setPositiveButton("TRY AGAIN!!!", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(Question5.this,Question5.class);
+                            startActivity(intent);
+                        }
+                    });
                     alertDialog1.show();}
 
             }
@@ -103,7 +128,8 @@ public class Question5 extends AppCompatActivity implements SensorEventListener 
             public void onClick(View v) {
                 String button3_Text = answer3.getText().toString();
                 if(answer.equals(button3_Text)){AlertDialog.Builder alertDialog=new AlertDialog.Builder(Question5.this);
-                    alertDialog.setMessage("Correct Answer");
+                    alertDialog.setView(imageView);
+                    alertDialog.setInverseBackgroundForced(true);
                     alertDialog.setPositiveButton("Go to Result Page", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -114,7 +140,15 @@ public class Question5 extends AppCompatActivity implements SensorEventListener 
                     alertDialog.show();
                 }else {
                     AlertDialog.Builder alertDialog1=new AlertDialog.Builder(Question5.this);
-                    alertDialog1.setMessage("Wrong Answer");
+                    alertDialog1.setView(imageViewMad);
+                    alertDialog1.setInverseBackgroundForced(true);
+                    alertDialog1.setPositiveButton("TRY AGAIN!!!", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(Question5.this,Question5.class);
+                            startActivity(intent);
+                        }
+                    });
                     alertDialog1.show();}
 
             }
