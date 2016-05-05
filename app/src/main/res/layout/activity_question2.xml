@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -27,7 +28,7 @@
             <ImageView
                 android:layout_width="105dp"
                 android:layout_height="105dp"
-                android:src="@drawable/cat"/>
+                android:src="@drawable/boy"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -53,27 +54,27 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:textSize="20dp"
-            android:text="DOG"
+            android:text="GIRL"
             android:id="@+id/answer_4"
-            android:backgroundTint="#0FFF"
+            android:backgroundTint="#5353c6"
             />
         <Button
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:text="CAT"
+            android:text="BOY"
             android:textSize="20dp"
             android:id="@+id/answer_5"
-            android:backgroundTint="#0FFF"
+            android:backgroundTint="#5353c6"
 
             />
 
         <Button
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:text="BIRD"
+            android:text="ALIEN"
             android:textSize="20dp"
             android:id="@+id/answer_6"
-            android:backgroundTint="#0FFF"
+            android:backgroundTint="#5353c6"
             />
 
     </LinearLayout>

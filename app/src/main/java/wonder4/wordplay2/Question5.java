@@ -3,19 +3,36 @@ package wonder4.wordplay2;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Question5 extends AppCompatActivity {
+public class Question5 extends AppCompatActivity implements SensorEventListener {
+
+    private SensorManager sensorManager;
+    private boolean isColor = false;
+    private View view;
+    private long lastUpdate;
     int Score5=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question5);
+        view = findViewById(R.id.linear5);
+        view.setBackgroundColor(Color.BLUE);
+
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        lastUpdate = System.currentTimeMillis();
+
+
 
         Intent intent=getIntent();
         Score5 = intent.getIntExtra("Score4",0);
@@ -23,6 +40,7 @@ public class Question5 extends AppCompatActivity {
         final String answer = "DUCK";
 
         ImageButton leftarrow = (ImageButton)findViewById(R.id.left_arrow);
+        ImageButton rightarrow = (ImageButton)findViewById(R.id.right_arrow);
         final Button answer1 = (Button)findViewById(R.id.answer_13);
         final Button answer2 = (Button)findViewById(R.id.answer_14);
         final Button answer3 = (Button)findViewById(R.id.answer_15);
@@ -116,5 +134,70 @@ public class Question5 extends AppCompatActivity {
 
         });
 
+        rightarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Question5.this,Result.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            getAccelerometer(event);
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
+
+    private void getAccelerometer(SensorEvent event) {
+        float[] values = event.values;
+        // Movement
+        float x = values[0];
+        float y = values[1];
+        float z = values[2];
+
+        float accelationSquareRoot = (x * x + y * y + z * z)
+                / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH);
+
+        long actualTime = System.currentTimeMillis();
+
+
+        if (accelationSquareRoot >= 2) //it will be executed if you shuffle
+        {
+
+            if (actualTime - lastUpdate < 200) {
+                return;
+            }
+            lastUpdate = actualTime;//updating lastUpdate for next shuffle
+            if (isColor) {
+                view.setBackgroundColor(Color.BLUE);
+
+            } else {
+                view.setBackgroundColor(Color.CYAN);
+            }
+            isColor = !isColor;
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // register this class as a listener for the orientation and
+        // accelerometer sensors
+        sensorManager.registerListener(this,sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+                SensorManager.SENSOR_DELAY_NORMAL);
+    }
+
+    @Override
+    protected void onPause() {
+        // unregister listener
+        super.onPause();
+        sensorManager.unregisterListener(this);
     }
 }
