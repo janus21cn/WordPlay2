@@ -51,6 +51,15 @@ public class Help extends AppCompatActivity {
             }
         });
 
+        Button homepage = (Button) findViewById(R.id.homepage_btnSetting) ;
+        homepage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Help.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ratingBar=(RatingBar) findViewById(R.id.ratingBar);
         ratingValue = (TextView) findViewById(R.id.rating_result);
         ratingValue.setText(String.valueOf(ratingBar.getRating()));

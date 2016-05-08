@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@color/colorAccent">
+    android:background="@color/colorAccent"
+    android:weightSum="1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,14 +15,14 @@
             android:layout_width="508dp"
             android:layout_height="wrap_content"
             android:text="Send Feedback"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:paddingLeft="20dp"
             android:textStyle="bold|normal"
             android:layout_weight="0.49" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:text=" "
             android:background="@drawable/ic_navigate_next_black_24dp"
             android:id="@+id/f_backbutton"
@@ -37,7 +38,7 @@
             android:layout_width="486dp"
             android:layout_height="wrap_content"
             android:text="Developer Website"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:paddingLeft="20dp"
 
             android:textStyle="bold|normal"
@@ -45,7 +46,7 @@
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:background="@drawable/ic_navigate_next_black_24dp"
             android:text="  "
             android:id="@+id/dev_Website" />
@@ -61,14 +62,14 @@
             android:layout_width="489dp"
             android:layout_height="wrap_content"
             android:text="Privacy Policy"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:paddingLeft="20dp"
             android:layout_weight="0.48"
             android:textStyle="bold|normal" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:text="  "
             android:background="@drawable/ic_navigate_next_black_24dp"
             android:id="@+id/privacy_policy"
@@ -76,34 +77,43 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="80dp"
         android:orientation="vertical"
-        android:weightSum="1"
-        android:gravity="center">
+        android:weightSum=".75"
+        android:gravity="center|left"
+        android:layout_gravity="left">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Rate WordPlay"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold|normal" />
 
         <RatingBar
             android:layout_width="255dp"
             android:layout_height="wrap_content"
             android:id="@+id/ratingBar"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center_horizontal|left"
             android:stepSize="1.0"
             android:rating="2.0"
             android:numStars="5"
             android:background="#ffffff" />
 
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:id="@+id/rate_btn"/>
 
     </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/rate_btn"
+        android:layout_gravity="left" />
+
+    <Button
+        android:id="@+id/homepage_btn"
+        android:layout_width="59dp"
+        android:layout_height="47dp"
+        android:background="@drawable/home_icon"
+        android:layout_gravity="right" />
 </LinearLayout>

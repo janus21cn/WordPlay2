@@ -14,14 +14,14 @@
             android:layout_width="508dp"
             android:layout_height="wrap_content"
             android:text="Send Feedback"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:paddingLeft="20dp"
             android:textStyle="bold|normal"
             android:layout_weight="0.15" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:text=" "
             android:background="@drawable/ic_navigate_next_black_24dp"
             android:id="@+id/f_backbutton"
@@ -37,14 +37,14 @@
             android:layout_width="486dp"
             android:layout_height="wrap_content"
             android:text="Developer Website"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:paddingLeft="20dp"
             android:textStyle="bold|normal"
             android:layout_weight="0.50" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="31dp"
             android:background="@drawable/ic_navigate_next_black_24dp"
             android:text="  "
             android:id="@+id/dev_Website" />
@@ -60,14 +60,14 @@
             android:layout_width="489dp"
             android:layout_height="wrap_content"
             android:text="Privacy Policy"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:paddingLeft="20dp"
             android:layout_weight="0.50"
             android:textStyle="bold|normal" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="33dp"
             android:text="  "
             android:background="@drawable/ic_navigate_next_black_24dp"
             android:id="@+id/privacy_policy"
@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Rate WordPlay"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold|normal" />
 
         <RatingBar
@@ -108,9 +108,10 @@
             android:layout_width="173dp"
             android:layout_height="wrap_content"
             android:id="@+id/rating_result_label"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:text="Result: "
-            android:paddingLeft="20dp" />
+            android:paddingLeft="20dp"
+            android:textIsSelectable="true" />
 
         <TextView
             android:layout_width="371dp"
@@ -120,6 +121,11 @@
             android:id="@+id/rating_result"
             />
     </LinearLayout>
-
+        <Button
+            android:id="@+id/homepage_btnSetting"
+            android:layout_width="59dp"
+            android:layout_height="47dp"
+            android:background="@drawable/home_icon"
+            android:layout_gravity="right" />
     </LinearLayout>
 </LinearLayout>
