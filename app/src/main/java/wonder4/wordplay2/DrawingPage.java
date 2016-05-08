@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -26,10 +27,16 @@ public class DrawingPage extends AppCompatActivity implements View.OnClickListen
     private float smallBrush, mediumBrush, largeBrush;
     private ImageButton currPaint, drawBtn, eraseBtn, newBtn, saveBtn;
 
+    private String[] bgImg={"drawing_duck","drawing_egg", "drawing_elephant","drawing_earth","drawing_butterfly"};
+    private ImageView drawingPic;
+    private int i = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawing_page);
+
+//        drawingPic = (ImageView) findViewById(R.id.drawing);
 
         newBtn = (ImageButton)findViewById(R.id.new_btn);
         newBtn.setOnClickListener(this);
@@ -62,6 +69,37 @@ public class DrawingPage extends AppCompatActivity implements View.OnClickListen
         drawBtn.setOnClickListener(this);
 
         drawView.setBrushSize(smallBrush);
+
+        Button nextBtn = (Button) findViewById(R.id.next_btn);
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(i<5){
+                    int imgID = getResources().getIdentifier(bgImg[i] , "drawable", getPackageName());
+                    drawView.setBackgroundResource(imgID);
+                    i++;
+                }else{
+                    Intent intent = new Intent(DrawingPage.this, MainActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        Button previousBtn = (Button) findViewById(R.id.previous_btn);
+        previousBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(i>0){
+                    i--;
+                    int imgID = getResources().getIdentifier(bgImg[i] , "drawable", getPackageName());
+                    drawView.setBackgroundResource(imgID);
+                }else{
+                    Intent intent = new Intent(DrawingPage.this, MainActivity.class);
+                    startActivity(intent);
+                }
+
+            }
+        });
 
     }
 
