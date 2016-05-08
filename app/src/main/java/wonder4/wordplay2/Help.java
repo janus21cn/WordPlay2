@@ -60,6 +60,7 @@ public class Help extends AppCompatActivity {
             }
         });
 
+        //adapted from Android Rating Bar Example http://javarticles.com/2015/04/android-rating-bar-example.html
         ratingBar=(RatingBar) findViewById(R.id.ratingBar);
         ratingValue = (TextView) findViewById(R.id.rating_result);
         ratingValue.setText(String.valueOf(ratingBar.getRating()));

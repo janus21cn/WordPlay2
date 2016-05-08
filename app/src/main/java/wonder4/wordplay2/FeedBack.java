@@ -20,6 +20,7 @@ public class FeedBack extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Addapted from How to send Email from Android www.mkyong.com/android/how-to-sendemail-in-android
         EditText emailMessage = (EditText) findViewById(R.id.feedback_message);
 
         Button feedBack = (Button) findViewById(R.id.btn_feedback);
