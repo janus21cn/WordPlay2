@@ -41,10 +41,11 @@
 
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Home"
+            android:layout_width="93dp"
+            android:layout_height="82dp"
+
             android:id="@+id/homeBtn_Set"
+            android:background="@drawable/home_icon"
             android:layout_gravity="bottom" />
 
     </LinearLayout>
