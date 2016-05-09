@@ -43,9 +43,18 @@ public class Question3 extends AppCompatActivity implements SensorEventListener 
 
         final ImageView imageView = new ImageView(getApplicationContext());
         final ImageView imageViewMad = new ImageView(getApplicationContext());
+        Button homepagequiz3 = (Button)findViewById(R.id.gobegining_btn3);
 
         imageView.setImageResource(R.drawable.smile);
         imageViewMad.setImageResource(R.drawable.mad);
+
+        homepagequiz3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Question3.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         answer1.setOnClickListener(new View.OnClickListener(){
 
@@ -56,6 +65,7 @@ public class Question3 extends AppCompatActivity implements SensorEventListener 
                     AlertDialog.Builder alertDialog=new AlertDialog.Builder(Question3.this);
                     alertDialog.setView(imageView);
                     alertDialog.setInverseBackgroundForced(true);
+                    alertDialog.setCancelable(false);
                     alertDialog.setPositiveButton("Go to Next Question", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -68,10 +78,13 @@ public class Question3 extends AppCompatActivity implements SensorEventListener 
                     AlertDialog.Builder alertDialog1=new AlertDialog.Builder(Question3.this);
                     alertDialog1.setView(imageViewMad);
                     alertDialog1.setInverseBackgroundForced(true);
+                    alertDialog1.setCancelable(false);
                     alertDialog1.setPositiveButton("TRY AGAIN!!!", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             Intent intent = new Intent(Question3.this,Question3.class);
+                            int c = Score3;
+                            intent.putExtra("Score3",c);
                             startActivity(intent);
                         }
                     });
@@ -88,6 +101,7 @@ public class Question3 extends AppCompatActivity implements SensorEventListener 
                 if(answer.equals(button2_Text)){AlertDialog.Builder alertDialog=new AlertDialog.Builder(Question3.this);
                     alertDialog.setView(imageView);
                     alertDialog.setInverseBackgroundForced(true);
+                    alertDialog.setCancelable(false);
                     alertDialog.setPositiveButton("Go to Next Question", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -100,10 +114,13 @@ public class Question3 extends AppCompatActivity implements SensorEventListener 
                     AlertDialog.Builder alertDialog1=new AlertDialog.Builder(Question3.this);
                     alertDialog1.setView(imageViewMad);
                     alertDialog1.setInverseBackgroundForced(true);
+                    alertDialog1.setCancelable(false);
                     alertDialog1.setPositiveButton("TRY AGAIN!!!", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             Intent intent = new Intent(Question3.this,Question3.class);
+                            int c = Score3;
+                            intent.putExtra("Score3",c);
                             startActivity(intent);
                         }
                     });
@@ -121,6 +138,7 @@ public class Question3 extends AppCompatActivity implements SensorEventListener 
                 if(answer.equals(button3_Text)){AlertDialog.Builder alertDialog=new AlertDialog.Builder(Question3.this);
                     alertDialog.setView(imageView);
                     alertDialog.setInverseBackgroundForced(true);
+                    alertDialog.setCancelable(false);
                     alertDialog.setPositiveButton("Go to Next Question", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -137,6 +155,7 @@ public class Question3 extends AppCompatActivity implements SensorEventListener 
                     AlertDialog.Builder alertDialog1=new AlertDialog.Builder(Question3.this);
                     alertDialog1.setView(imageViewMad);
                     alertDialog1.setInverseBackgroundForced(true);
+                    alertDialog1.setCancelable(false);
                     alertDialog1.setPositiveButton("TRY AGAIN!!!", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -155,6 +174,8 @@ public class Question3 extends AppCompatActivity implements SensorEventListener 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Question3.this,Question4.class);
+                int c = Score3;
+                intent.putExtra("Score3",c);
                 startActivity(intent);
 
 
@@ -167,6 +188,8 @@ public class Question3 extends AppCompatActivity implements SensorEventListener 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Question3.this,Question2.class);
+                int c = Score3;
+                intent.putExtra("Score3",c);
                 startActivity(intent);
 
 

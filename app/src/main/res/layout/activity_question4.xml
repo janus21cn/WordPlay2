@@ -10,6 +10,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="wonder4.wordplay2.Question4" android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/gobegining_btn4"
+            android:background="@drawable/home_icon" />
+    </RelativeLayout>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
@@ -84,8 +95,8 @@
         android:gravity="center">
 
         <ImageButton
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:id="@+id/left_arrow"
             android:background="@drawable/left"
             />
@@ -103,8 +114,8 @@
             />
 
         <ImageButton
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:id="@+id/right_arrow"
             android:background="@drawable/right"
             android:foregroundGravity="right" />
